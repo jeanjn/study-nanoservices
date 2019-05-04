@@ -1,0 +1,18 @@
+{
+  "name": "thumbnail-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.437.0",
+    "serverless-offline": "^4.9.4"
+  },
+  "dependencies": {
+    "jimp": "^0.6.1"
+  }
+}

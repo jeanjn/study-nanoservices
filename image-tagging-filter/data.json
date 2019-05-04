@@ -1,0 +1,22 @@
+{
+    "Records": [
+        {
+            "EventSource": "aws:sns",
+            "EventVersion": "1.0",
+            "EventSubscriptionArn": "arn:aws:sns:us-east-1:145685242367:s3-nanoservices-imagens-put-topic:dce60903-9ad2-41a0-9128-6a6b933beaf8",
+            "Sns": {
+                "Type": "Notification",
+                "MessageId": "10c268a3-6ee2-5025-b604-3de4dde632d0",
+                "TopicArn": "arn:aws:sns:us-east-1:145685242367:s3-nanoservices-imagens-put-topic",
+                "Subject": "Amazon S3 Notification",
+                "Message": "{\"Records\":[{\"eventVersion\":\"2.1\",\"eventSource\":\"aws:s3\",\"awsRegion\":\"us-east-1\",\"eventTime\":\"2019-05-04T15:33:24.323Z\",\"eventName\":\"ObjectCreated:Put\",\"userIdentity\":{\"principalId\":\"AJJEEJE2BTYED\"},\"requestParameters\":{\"sourceIPAddress\":\"201.81.176.49\"},\"responseElements\":{\"x-amz-request-id\":\"F434380D01485AB3\",\"x-amz-id-2\":\"1dsGXtKUjtY9qWsjqVg0DZ+4A2KVKpJNcFLt9Unxt/NPL7fIc1QnVYGr5oNjkVzox/BDvz2dhWs=\"},\"s3\":{\"s3SchemaVersion\":\"1.0\",\"configurationId\":\"put-object-notification\",\"bucket\":{\"name\":\"nanoservices-images-jeanjnx2\",\"ownerIdentity\":{\"principalId\":\"AJJEEJE2BTYED\"},\"arn\":\"arn:aws:s3:::nanoservices-images-jeanjnx2\"},\"object\":{\"key\":\"golden3.jpg\",\"size\":184455,\"eTag\":\"30285eb42f795d5086f923929fd4081e\",\"sequencer\":\"005CCDB0C43936D4C7\"}}}]}",
+                "Timestamp": "2019-05-04T15:33:24.443Z",
+                "SignatureVersion": "1",
+                "Signature": "CnC74dwsfrU1zG1tChYl+xAUzIwEpjpeOWhPqDJ6lSqyOVL5+peNP/EesL0orT+Z2XFwnnzQCij5HGYzq3w71w0c5xMXyIDq/JKCECoK03tMKcIwqTJGrehnjUBsRXCIP1kaChaiSO99q8UFold98Bsz2VaHnpAQjWI9ld27NSp1ZSqn//BAagHr7TQ70lxv5OOGKc5wy2YqlWfVdDSZEYrbUOi2b36x7BtO6ZeupFtVGnPKuhNVZp/snuRPeimuOXY604XaSMO3x5B+taE/gbdSdMd9NMj/ozqWLTIdeuxh7AjOrKbdO9F1hsHLRIUAWTPpwxyB7stJGvfJnzE3QA==",
+                "SigningCertUrl": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem",
+                "UnsubscribeUrl": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:145685242367:s3-nanoservices-imagens-put-topic:dce60903-9ad2-41a0-9128-6a6b933beaf8",
+                "MessageAttributes": {}
+            }
+        }
+    ]
+}
