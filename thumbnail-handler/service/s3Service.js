@@ -22,13 +22,12 @@ const getObject = (bucket, key) => {
 }
 
 const putObject = (buffer, filename) => {
-    console.log('Buffer:');
     console.log(buffer);
     
     return new Promise((res, rej) => {
         s3.putObject({
             Bucket: BUCKET,
-            Key: 'thumbnail-' + filename,
+            Key: filename,
             Body: buffer
         }, (err, data) => {
             if(err){
@@ -36,7 +35,7 @@ const putObject = (buffer, filename) => {
             }
             return res({
                 bucket: BUCKET,
-                key: 'thumbnail-' + filename
+                key: filename
             });
         })
     })

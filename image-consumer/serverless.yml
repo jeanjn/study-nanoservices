@@ -11,15 +11,9 @@
 #
 # Happy Coding!
 
-service: http-handler # NOTE: update this with your service name
+service: image-consumer # NOTE: update this with your service name
 plugins:
- - serverless-apigw-binary
  - serverless-offline
-
-custom:
-  apigwBinary:
-    types:
-      - 'image/jpeg'
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -63,40 +57,28 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  upload:
-    handler: handler.upload
-    role: arn:aws:iam::145685242367:role/lambda-http-handler
+  consumer:
+    handler: handler.consumer
+    role: arn:aws:iam::145685242367:role/lambda-image-consumer
+    vpc:
+      subnetIds:
+        - subnet-0fd82f257ed4c9293
+        - subnet-0e3056eaf95ef003b
+      securityGroupIds:
+        - sg-03e52a0b92a099fe5
+    reserverdConcurrency: 1
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
     events:
-     - http:
-         path: images
-         method: post
-
-  get:
-    handler: handler.get
-    role: arn:aws:iam::145685242367:role/lambda-http-handler-get
-    vpc: 
-      subnetIds:
-        - subnet-0fd82f257ed4c9293
-      securityGroupIds:
-        - sg-03e52a0b92a099fe5
-
-    events:
-     - http:
-         path: images
-         method: get
-
-
-
-
-
+#      - http:
+#          path: users/create
+#          method: get
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
-#      - sns: greeter-topic
+      - sqs: arn:aws:sqs:us-east-1:145685242367:post-processing-image-queue
 #      - stream: arn:aws:dynamodb:region:XXXXXX:table/foo/stream/1970-01-01T00:00:00.000
 #      - alexaSkill: amzn1.ask.skill.xx-xx-xx-xx
 #      - alexaSmartHome: amzn1.ask.skill.xx-xx-xx-xx

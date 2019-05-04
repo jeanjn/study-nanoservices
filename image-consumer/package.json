@@ -1,5 +1,5 @@
 {
-  "name": "http-handler",
+  "name": "image-consumer",
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",
@@ -9,9 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "aws-sdk": "^2.437.0",
-    "serverless": "^1.40.0",
-    "serverless-apigw-binary": "^0.4.4",
+    "aws-sdk": "^2.449.0",
     "serverless-offline": "^4.9.4"
   },
   "dependencies": {

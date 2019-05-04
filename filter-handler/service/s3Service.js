@@ -28,7 +28,7 @@ const putObject = (buffer, filename) => {
     return new Promise((res, rej) => {
         s3.putObject({
             Bucket: BUCKET,
-            Key: 'bw-' + filename,
+            Key: filename,
             Body: buffer
         }, (err, data) => {
             if(err){
@@ -36,7 +36,7 @@ const putObject = (buffer, filename) => {
             }
             return res({
                 bucket: BUCKET,
-                key: 'bw-' + filename
+                key: filename
             });
         })
     })
